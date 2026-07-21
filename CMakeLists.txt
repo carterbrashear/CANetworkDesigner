@@ -5,13 +5,13 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_BUILD_TYPE Debug)
 
-# FIXME: Remove this
-target_compile_options(CANetworkDesigner PRIVATE -Wall -Werror)
-
 find_package(SDL2 REQUIRED)
 find_package(OpenGL REQUIRED)
 
 add_executable(CANetworkDesigner main.cpp)
+
+# FIXME: Remove this
+target_compile_options(CANetworkDesigner PRIVATE -Wall -Werror)
 
 target_link_libraries(CANetworkDesigner PRIVATE 
     SDL2::SDL2 
