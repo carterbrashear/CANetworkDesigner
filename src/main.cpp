@@ -11,8 +11,6 @@
 #include <imgui_impl_opengl3.h>
 #include <jetbrains_mono.h>
 
-#include <json.hpp>
-
 // Application state structure passed between SDL callbacks
 struct AppState {
     Window window;

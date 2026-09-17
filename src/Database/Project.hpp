@@ -2,15 +2,15 @@
 #define CAN_DATABASE_HPP
 #include <sqlite3.h>
 
-class CanDataBase {
+class Project {
     sqlite3* db;
 public:
-    CanDataBase();
+    Project();
 
     void create();
     void open();
 
-    ~CanDataBase() = default;
+    ~Project() = default;
 };
 
 #endif //CAN_DATABASE_HPP

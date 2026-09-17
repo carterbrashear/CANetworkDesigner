@@ -34,6 +34,7 @@ set(IMGUI_SOURCES
 add_executable(CANetworkDesigner
         src/main.cpp
         external/glad/glad.c
+        external/tinyfiledialogs/tinyfiledialogs.c
         ${IMGUI_SOURCES}
         src/GUI/GUI.hpp
         src/GUI/GUI.cpp
@@ -41,8 +42,8 @@ add_executable(CANetworkDesigner
         src/GUI/Window/window.cpp
         src/GUI/OpenGL/OpenGL.hpp
         src/GUI/OpenGL/OpenGL.cpp
-        src/CanDB/CanDataBase.hpp
-        src/CanDB/CanDataBase.cpp
+        src/Database/Project.hpp
+        src/Database/Project.cpp
 )
 
 # Global definitions
@@ -79,4 +80,5 @@ target_include_directories(CANetworkDesigner SYSTEM PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/external/imgui/backends
         ${CMAKE_CURRENT_SOURCE_DIR}/external/fonts
         ${CMAKE_CURRENT_SOURCE_DIR}/external/sqlite3
+        ${CMAKE_CURRENT_SOURCE_DIR}/external/tinyfiledialogs
 )
